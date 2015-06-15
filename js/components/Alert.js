@@ -65,7 +65,7 @@ export default class Alert extends React.Component {
         if(alertType !== undefined) {
             return (
                     <div style={alertType} role="alert" id={this.props.id}>      
-                    <span style={{display: 'table-cell', verticalAlign: 'middle'}}>{this.props.alert.content}</span> 
+                    <span dangerouslySetInnerHTML={{__html: this.props.alert.content}}></span> 
                 <div style={alertCloseButton} ><img onClick={this.dismissAlert} src="../../images/ic_close_18px.svg"></img>
                 </div>
                     </div>

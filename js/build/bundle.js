@@ -52,10 +52,10 @@ var alertCloseButton = {
     top: 0 + 'px'
 };
 
-module.exports = (function(){var ____ClassC=React.Component;for(var ____ClassC____Key in ____ClassC){if(____ClassC.hasOwnProperty(____ClassC____Key)){Alert[____ClassC____Key]=____ClassC[____ClassC____Key];}}var ____SuperProtoOf____ClassC=____ClassC===null?null:____ClassC.prototype;Alert.prototype=Object.create(____SuperProtoOf____ClassC);Alert.prototype.constructor=Alert;Alert.__superConstructor__=____ClassC;
+module.exports = (function(){var ____ClassD=React.Component;for(var ____ClassD____Key in ____ClassD){if(____ClassD.hasOwnProperty(____ClassD____Key)){Alert[____ClassD____Key]=____ClassD[____ClassD____Key];}}var ____SuperProtoOf____ClassD=____ClassD===null?null:____ClassD.prototype;Alert.prototype=Object.create(____SuperProtoOf____ClassD);Alert.prototype.constructor=Alert;Alert.__superConstructor__=____ClassD;
 
     function Alert(props) {
-        ____ClassC.call(this,props);
+        ____ClassD.call(this,props);
         this.props = props;
         this.dismissAlert = this.dismissAlert.bind(this);
         this.state = {sShow: true};
@@ -88,7 +88,7 @@ module.exports = (function(){var ____ClassC=React.Component;for(var ____ClassC__
         if(alertType !== undefined) {
             return (
                     React.createElement("div", {style: alertType, role: "alert", id: this.props.id}, 
-                    React.createElement("span", {style: {display: 'table-cell', verticalAlign: 'middle'}}, this.props.alert.content), 
+                    React.createElement("span", {dangerouslySetInnerHTML: {__html: this.props.alert.content}}), 
                 React.createElement("div", {style: alertCloseButton}, React.createElement("img", {onClick: this.dismissAlert, src: "../../images/ic_close_18px.svg"})
                 )
                     )
