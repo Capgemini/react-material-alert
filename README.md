@@ -1,14 +1,8 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+react-material-alert is a lightweight library for displaying UI alerts in the google material design way
 
-### What is this repository for? ###
-
-* The yayp web client
-* 0.1
-* [Mayas Haddad](https://bitbucket.org/mayasHaddad)
-
-### How do I get set up? ###
-
-* After cloning the yayp main directory, proceed to an npm install to setup the dependencies used within the project 
-* Tests are to come
+### Installation ###
+To come
+### Usage ###
+To come
