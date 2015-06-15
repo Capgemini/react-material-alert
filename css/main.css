@@ -1,0 +1,73 @@
+/* Stiziles */
+
+html, body {
+  background: #fff;
+}
+
+/* main */
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #222222;
+}
+
+.main img {
+  width: 103px;
+  height: 89px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* transitions */
+
+.fade-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+}
+
+.alert {
+    margin: 5px;
+    position: relative;
+    height: 50%;
+}
+
+.alert-success {
+    background-color: #69F0AE;
+}
+
+.alert-warning {
+    background-color: #FDD835;
+}
+
+.alert-failure {
+    background-color: #F44336;
+}
+
+.alert-info {
+    background-color: #BBDEFB;
+}
+
+.alert-close-button {
+    position: absolute;
+    right: 0px;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(Roboto-Light.ttf);
+}
