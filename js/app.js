@@ -1,6 +1,6 @@
 var React = require('react');
 
-import Alert from './components/Alert';
+import Alert from '../lib/Alert';
 import Alerts from './components/AlertsSample';
 var App = React.createClass({
     

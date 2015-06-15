@@ -1,4 +1,4 @@
-import Natures from './Natures';
+var Natures = require ('../../lib/Natures');
 
 var Alerts = [
     {

@@ -45,11 +45,11 @@ function bundle() {
 
 
 // add custom browserify options here
-var customOpts = {
+var customOptsBuild = {
   entries: ['./js/components/Alert.js'],
   debug: true
 };
-var buildOpts = assign({}, watchify.args, customOpts);
+var buildOpts = assign({}, watchify.args, customOptsBuild);
 var buildWatch = watchify(browserify(buildOpts)); 
 buildWatch.transform(reactify, {global: true});
 buildWatch.transform(browserifyES6Transpiler)
@@ -63,7 +63,7 @@ buildWatch.on('log', gutil.log); // output build logs to terminal
 
 function build() {
     
-  return b.bundle()
+  return buildWatch.bundle()
     // log errors if they happen
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source('react-material-alert.js'))
