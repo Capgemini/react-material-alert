@@ -34,9 +34,19 @@ export default class Alert extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
+        this.dismissAlert = this.dismissAlert.bind(this);
+        this.state = {sShow: true};
     }
-
+    
+    dismissAlert() {
+        this.setState({sShow: false});
+    }
+    
     render() {
+        
+        if(this.state.sShow === false) {
+            return <div></div>;
+        }
         var alertType;
         switch(this.props.alert.nature) {
             case Natures.WARNING:
@@ -54,9 +64,10 @@ export default class Alert extends React.Component {
         }
         if(alertType !== undefined) {
             return (
-                    <div style={alertType} role="alert">      
+                    <div style={alertType} role="alert" id={this.props.id}>      
                     <span style={{display: 'table-cell', verticalAlign: 'middle'}}>{this.props.alert.content}</span> 
-                <div style={alertCloseButton}><object type="image/svg+xml" data="../../images/ic_close_18px.svg"></object></div>
+                <div style={alertCloseButton} ><img onClick={this.dismissAlert} src="../../images/ic_close_18px.svg"></img>
+                </div>
                     </div>
                 );
         }

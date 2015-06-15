@@ -7,13 +7,13 @@ var App = React.createClass({displayName: "App",
     
     render: function() {
         return React.createElement("div", null, 
-                React.createElement(Alert, {alert: Alerts[0]}), 
+                React.createElement(Alert, {alert: Alerts[0], id: "alert1"}), 
                 
-                React.createElement(Alert, {alert: Alerts[1]}), 
+                React.createElement(Alert, {alert: Alerts[1], id: "alert2"}), 
                 
-                React.createElement(Alert, {alert: Alerts[2]}), 
+                React.createElement(Alert, {alert: Alerts[2], id: "alert3"}), 
                 
-                React.createElement(Alert, {alert: Alerts[3]})
+                React.createElement(Alert, {alert: Alerts[3], id: "alert4"})
             );
     }
 });
@@ -52,14 +52,24 @@ var alertCloseButton = {
     top: 0 + 'px'
 };
 
-module.exports = (function(){var ____Class8=React.Component;for(var ____Class8____Key in ____Class8){if(____Class8.hasOwnProperty(____Class8____Key)){Alert[____Class8____Key]=____Class8[____Class8____Key];}}var ____SuperProtoOf____Class8=____Class8===null?null:____Class8.prototype;Alert.prototype=Object.create(____SuperProtoOf____Class8);Alert.prototype.constructor=Alert;Alert.__superConstructor__=____Class8;
+module.exports = (function(){var ____ClassC=React.Component;for(var ____ClassC____Key in ____ClassC){if(____ClassC.hasOwnProperty(____ClassC____Key)){Alert[____ClassC____Key]=____ClassC[____ClassC____Key];}}var ____SuperProtoOf____ClassC=____ClassC===null?null:____ClassC.prototype;Alert.prototype=Object.create(____SuperProtoOf____ClassC);Alert.prototype.constructor=Alert;Alert.__superConstructor__=____ClassC;
 
     function Alert(props) {
-        ____Class8.call(this,props);
+        ____ClassC.call(this,props);
         this.props = props;
+        this.dismissAlert = this.dismissAlert.bind(this);
+        this.state = {sShow: true};
     }
-
+    
+    Alert.prototype.dismissAlert=function() {
+        this.setState({sShow: false});
+    };
+    
     Alert.prototype.render=function() {
+        
+        if(this.state.sShow === false) {
+            return React.createElement("div", null);
+        }
         var alertType;
         switch(this.props.alert.nature) {
             case Natures.WARNING:
@@ -77,9 +87,10 @@ module.exports = (function(){var ____Class8=React.Component;for(var ____Class8__
         }
         if(alertType !== undefined) {
             return (
-                    React.createElement("div", {style: alertType, role: "alert"}, 
+                    React.createElement("div", {style: alertType, role: "alert", id: this.props.id}, 
                     React.createElement("span", {style: {display: 'table-cell', verticalAlign: 'middle'}}, this.props.alert.content), 
-                React.createElement("div", {style: alertCloseButton}, React.createElement("object", {type: "image/svg+xml", data: "../../images/ic_close_18px.svg"}))
+                React.createElement("div", {style: alertCloseButton}, React.createElement("img", {onClick: this.dismissAlert, src: "../../images/ic_close_18px.svg"})
+                )
                     )
                 );
         }
