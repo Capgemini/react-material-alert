@@ -42,3 +42,36 @@ function bundle() {
     .pipe(sourcemaps.write('./')) // writes .map file
     .pipe(gulp.dest('./js/build'));
 }
+
+
+// add custom browserify options here
+var customOpts = {
+  entries: ['./js/components/Alert.js'],
+  debug: true
+};
+var buildOpts = assign({}, watchify.args, customOpts);
+var buildWatch = watchify(browserify(buildOpts)); 
+buildWatch.transform(reactify, {global: true});
+buildWatch.transform(browserifyES6Transpiler)
+// add transformations here
+// i.e. b.transform(coffeeify);
+
+gulp.task('dist', build); // so you can run `gulp js` to build the file
+buildWatch.on('update', build); // on any dep update, runs the bundler
+buildWatch.on('log', gutil.log); // output build logs to terminal
+
+
+function build() {
+    
+  return b.bundle()
+    // log errors if they happen
+    .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+    .pipe(source('react-material-alert.js'))
+    // optional, remove if you don't need to buffer file contents
+    .pipe(buffer())
+    // optional, remove if you dont want sourcemaps
+    .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
+       // Add transformation tasks to the pipeline here.
+    .pipe(sourcemaps.write('./')) // writes .map file
+    .pipe(gulp.dest('./js/build'));
+}

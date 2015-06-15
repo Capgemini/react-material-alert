@@ -52,10 +52,10 @@ var alertCloseButton = {
     top: 0 + 'px'
 };
 
-module.exports = (function(){var ____ClassD=React.Component;for(var ____ClassD____Key in ____ClassD){if(____ClassD.hasOwnProperty(____ClassD____Key)){Alert[____ClassD____Key]=____ClassD[____ClassD____Key];}}var ____SuperProtoOf____ClassD=____ClassD===null?null:____ClassD.prototype;Alert.prototype=Object.create(____SuperProtoOf____ClassD);Alert.prototype.constructor=Alert;Alert.__superConstructor__=____ClassD;
+module.exports = (function(){var ____Class0=React.Component;for(var ____Class0____Key in ____Class0){if(____Class0.hasOwnProperty(____Class0____Key)){Alert[____Class0____Key]=____Class0[____Class0____Key];}}var ____SuperProtoOf____Class0=____Class0===null?null:____Class0.prototype;Alert.prototype=Object.create(____SuperProtoOf____Class0);Alert.prototype.constructor=Alert;Alert.__superConstructor__=____Class0;
 
     function Alert(props) {
-        ____ClassD.call(this,props);
+        ____Class0.call(this,props);
         this.props = props;
         this.dismissAlert = this.dismissAlert.bind(this);
         this.state = {sShow: true};
