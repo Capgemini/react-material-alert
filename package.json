@@ -1,6 +1,6 @@
 {
   "name": "react-material-alert",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
   "dependencies": {
     "react": "^0.13.3",
