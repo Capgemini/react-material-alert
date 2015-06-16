@@ -5,22 +5,6 @@
   "dependencies": {
     "react": "^0.13.3",
     "react-tools": "^0.13.3",
-    "reactify": "^1.1.1",
-    "lodash.assign": "^3.2.0",
-    "cssify": "^0.7.0" 
-  },
-  "devDependencies": {
-    "browserify": "^10.2.0",
-    "browserify-es6-transpiler": "0.0.3",
-    "gulp": "^3.8.11",
-    "gulp-mocha": "^2.1.0",
-    "gulp-qunit": "^1.2.1",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-util": "^3.0.4",
-    "mocha": "^2.2.5",
-    "mocha-traceur": "^2.1.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.2.1"
+    "lodash.assign": "^3.2.0"
   }
 }
