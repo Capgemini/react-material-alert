@@ -19,15 +19,12 @@ Please refer to the demo which has the minimum necessary webpack loaders for usi
 ### Usage ###
 
 1. require Alert tag:
-
 `var Alert = require('react-material-alert').Alert;`
 
 2. require Nature types:
-
 `var Natures = require('react-material-alert').Natures;`
 
 3. render tag in jsx:
-
 `<Alert alert={myAlert} id={"justLikeHtmlId"} />`
 
 The `myAlert` variable is a json that you would have declared like so:
