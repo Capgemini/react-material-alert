@@ -4,7 +4,8 @@
 
 react-material-alert is a lightweight library for displaying UI alerts in the google material design way
 
-[Demo](https://github.com/MayasHaddad/react-material-alert-demo)
+[Demo](http://mayashaddad.github.io/react-material-alert-demo/)
+[Demo source](https://github.com/MayasHaddad/react-material-alert-demo)
 
 ### Prerequisites ###
 In order to have the library up and running, your project must have webpack and some loaders installed.
