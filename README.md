@@ -4,7 +4,7 @@
 
 react-material-alert is a lightweight library for displaying UI alerts in the google material design way
 
-Demo.
+[Demo](https://github.com/MayasHaddad/react-material-alert-demo)
 
 ### Prerequisites ###
 In order to have the library up and running, your project must have webpack and some loaders installed.
@@ -15,17 +15,17 @@ Please refer to the demo which has the minimum necessary webpack loaders for usi
 `$> npm i react-material-alert`
 ### Usage ###
 
-1.Require Alert tag:
+1. require Alert tag:
 
 `var Alert = require('react-material-alert').Alert;`
 
-2.Require Nature types:
+2. require Nature types:
 
 `var Natures = require('react-material-alert').Natures;`
 
-3.Render tag:
+3. render tag in jsx:
 
-`<Alert alert={myAlert} id={"justLikeHtmlId"}>`
+`<Alert alert={myAlert} id={"justLikeHtmlId"} />`
 
 The `myAlert` variable is a json that you would have declared like so:
 
@@ -33,9 +33,9 @@ The `myAlert` variable is a json that you would have declared like so:
 
 The `myAlert` will have the value of the nature of the alert you want to display, you have the choice between:
 
-* Natures.SUCCESS
-* Natures.WARNING
-* Natures.FAILURE
-* Natures.INFO
+* `Natures.SUCCESS`
+* `Natures.WARNING`
+* `Natures.FAILURE`
+* `Natures.INFO`
 
 [dependencies-image-url]: https://david-dm.org/MayasHaddad/react-material-alert.svg
