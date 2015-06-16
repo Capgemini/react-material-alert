@@ -2,7 +2,7 @@
 
 # README #
 
-react-material-alert is a lightweight library for displaying UI alerts in the google material design way
+react-material-alert is a lightweight library for displaying UI alerts in the google material design way.
 
 [Demo](http://mayashaddad.github.io/react-material-alert-demo/)
 
@@ -11,7 +11,8 @@ react-material-alert is a lightweight library for displaying UI alerts in the go
 ### Prerequisites ###
 In order to have the library up and running, your project must have webpack and some loaders installed.
 
-Please refer to the demo which has the minimum necessary webpack loaders for using react-material-alert
+Please refer to the demo which has the minimum necessary webpack loaders for using react-material-alert.
+
 ### Installation ###
 
 `$> npm i react-material-alert`
@@ -40,4 +41,33 @@ The `myAlert` will have the value of the nature of the alert you want to display
 * `Natures.FAILURE`
 * `Natures.INFO`
 
+### Basic example ###
+
+
+```
+var React = require('react');
+
+var Alert = require('react-material-alert').Alert;
+
+var Natures = require('react-material-alert').Natures;
+
+var App = React.createClass({
+    render: function() {
+        return <div>
+                <Alert 
+                  alert= {{
+                    nature: Natures.SUCCESS,
+                    content: "it is a <strong>success</strong>!"
+                  }}
+                  id={"alert_1"} />
+            </div>;
+    }
+});
+React.render(<App />,
+             document.getElementById('app'));
+```
+
+### Browsers ###
+
+*react-material-alert* uses [flexbox](http://www.w3.org/TR/css-flexbox-1/)
 [dependencies-image-url]: https://david-dm.org/MayasHaddad/react-material-alert.svg
