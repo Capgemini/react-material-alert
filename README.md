@@ -15,13 +15,16 @@ Please refer to the demo which has the minimum necessary webpack loaders for usi
 `$> npm i react-material-alert`
 ### Usage ###
 
-Require Alert tag:
+1.Require Alert tag:
+
 `var Alert = require('react-material-alert').Alert;`
 
-Require Nature types:
+2.Require Nature types:
+
 `var Natures = require('react-material-alert').Natures;`
 
-Render tag:
+3.Render tag:
+
 `<Alert alert={myAlert} id={"justLikeHtmlId"}>`
 
 The `myAlert` variable is a json that you would have declared like so:
