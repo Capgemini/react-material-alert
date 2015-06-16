@@ -67,4 +67,5 @@ React.render(<App />,
 ### Browsers ###
 
 *react-material-alert* uses [flexbox](http://www.w3.org/TR/css-flexbox-1/)
+
 [dependencies-image-url]: https://david-dm.org/MayasHaddad/react-material-alert.svg
