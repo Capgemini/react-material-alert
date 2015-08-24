@@ -1,3 +1,5 @@
+A lightweight library for displaying UI alerts in the google material design way.
+
 ![dependencies-image-url]
 
 # README #
