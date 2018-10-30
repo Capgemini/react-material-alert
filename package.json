@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "main": "index.js",
   "dependencies": {
-    "react": "^0.13.3",
+    "react": "^0.14.0",
     "react-tools": "^0.13.3",
     "lodash.assign": "^3.2.0"
   }
